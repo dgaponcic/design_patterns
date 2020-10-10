@@ -61,7 +61,7 @@ the construction of an object decoupled from its representation
 Builder is used for creating Housing Complex. We can set number of floors, entrances, number of paking lots, whether the lot is closed or has 
 surveilance. Also, we can specify the number of rooms and balconies for apartaments. 
 
-As implementation, I gather all information on the builder object. After that, the method build is responsible of sending the builder in the constructor of the the HousingComplex. 
+As implementation, I gather all information on the builder object. After that, the method build is responsible of creating(by sending data to the constructor of HousingComplex) and returning the newly created object.
 
 The methods that build the objects have to return self so we can chain them(Fluent Builder). Some examples:
 ```
