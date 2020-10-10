@@ -135,4 +135,4 @@ def main():
 
 main()
 ```
-
+![alt text](https://github.com/dgaponcic/design_patterns/blob/master/creational_DP/tmps.png)
