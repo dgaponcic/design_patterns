@@ -51,14 +51,14 @@ class FactoryEconom(IFactory):
 
 ### Builder
 
-We use it Builder Pattern when:
+We use the builder pattern when:
 * We want to create a complex object (an object composed of many parts
 and created in different steps that might need to follow a specific order).
 * Different representations of an object are required, and we want to keep
-the construction of an object decoupled from its representation
-* We want to create an object at one point in time but access it at a later point
+the construction of an object decoupled from its representation.
+* We want to create an object at one point in time but access it at a later point.
 
-Builder is used for creating Housing Complex. We can set number of floors, entrances, number of paking lots, whether the lot is closed or has 
+The builder pattern is used for creating Housing Complex. We can set number of floors, entrances, number of paking lots, whether the lot is closed or has 
 surveilance. Also, we can specify the number of rooms and balconies for apartaments. 
 
 As implementation, I gather all information on the builder object. After that, the method build is responsible of creating(by sending data to the constructor of HousingComplex) and returning the newly created object.
