@@ -82,4 +82,54 @@ The result:
 
 ### Composite
 
+Composite is a structural design pattern that lets you compose objects into tree structures and then work with these structures as if they were individual objects.
+
+We use composite pattern to calculate the total area of the complex. We have composite class that is used for composites elements(complexes or outside yard which is composed of parking places and playgrounds) and leaves(apartaments, playgrounds, basement). 
+
+The diagram:
+
+![alt text](https://github.com/dgaponcic/design_patterns/blob/master/structural_DP/composite_diagram.png)
+
+
+The Composite class and the function for area calculation:
+```
+class Composite:
+  def get_area(self):
+    return reduce((lambda x, y: x + y.get_area()), self._children, 0)
+```
+
+And the classes inherit from the composite class:
+
+```
+class TownhouseComplex(LivingComplex):
+```
+
+The leaves have the function get_area():
+```
+class Apartament(LivingSpace):
+  def __init__(self, rooms, apartament_nb):
+    self.rooms = rooms
+    self.apartament_nb = apartament_nb
+    self.autonomous_heating = False
+    self.air_conditioner = False
+  
+  def get_area(self):
+    return self.rooms * 30
+```
+
+```
+  designer_company = DesignService()
+  apartament_complex = ApartamentComplex(3, 5, 4, designer_company, Outside(), Basement(150))
+  apartament_complex.add_apartament(Apartament(2, 25))
+  apartament_complex.add_apartament(Apartament(3, 26))
+  apartament_complex.add_playground(Playgrounds(100))
+  apartament_complex.add_parking_lot(ParkingLots(100, 200))
+  print("The total area of the complex is: ", apartament_complex.get_area())
+```
+
+The result:
+
+![alt text](https://github.com/dgaponcic/design_patterns/blob/master/structural_DP/composite.png)
+
+
 
