@@ -1,4 +1,4 @@
-import builder.housing_complex as housingComplex
+import builder.housing_complex as housing_complex
 
 class Builder:
   def __init__(self, factory):
@@ -57,5 +57,5 @@ class Builder:
     if total_nb_apartaments != len(self.apartaments):
       raise "Incorrect number of apartaments defined. Try again."
 
-    return housingComplex.HousingComplex(self)
+    return housing_complex.ApartamentComplex(self)
     
