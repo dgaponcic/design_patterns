@@ -52,7 +52,7 @@ The code used to test the decorator:
 ```
 The result:
 
-![alt text](https://github.com/dgaponcic/design_patterns/blob/master/structural_DP/decorator.png)
+![alt text](https://github.com/dgaponcic/design_patterns/blob/master/structural_DP/examples/decorator.png)
 
 ### Bridge
 The bridge pattern is a design pattern used in software engineering that is meant to decouple an abstraction from its implementation so that the two can vary independently.
@@ -76,7 +76,7 @@ We use bridge so that the buildings and services can be extended independently.
 ```
 The result:
 
-![alt text](https://github.com/dgaponcic/design_patterns/blob/master/structural_DP/bridge.png)
+![alt text](https://github.com/dgaponcic/design_patterns/blob/master/structural_DP/examples/bridge.png)
 
 
 
@@ -88,7 +88,7 @@ We use composite pattern to calculate the total area of the complex. We have com
 
 The diagram:
 
-![alt text](https://github.com/dgaponcic/design_patterns/blob/master/structural_DP/composite_diagram.png)
+![alt text](https://github.com/dgaponcic/design_patterns/blob/master/structural_DP/examples/composite_diagram.png)
 
 
 The Composite class and the function for area calculation:
@@ -129,7 +129,7 @@ class Apartament(LivingSpace):
 
 The result:
 
-![alt text](https://github.com/dgaponcic/design_patterns/blob/master/structural_DP/composite.png)
+![alt text](https://github.com/dgaponcic/design_patterns/blob/master/structural_DP/examples/composite.png)
 
 
 
