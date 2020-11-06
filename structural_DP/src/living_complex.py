@@ -1,5 +1,5 @@
-from entities.living_space import Apartament, Townhouse
-from entities.composite import Composite 
+from src.living_space import Apartament, Townhouse
+from src.composite import Composite 
 
 class LivingComplex(Composite):
   def add_parking_lot(self, parking_lot):

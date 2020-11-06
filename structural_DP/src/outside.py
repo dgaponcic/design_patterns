@@ -1,5 +1,5 @@
 from functools import reduce
-from entities.composite import Composite
+from src.composite import Composite
 
 class Outside(Composite):
   def __init__(self):
