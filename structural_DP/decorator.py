@@ -1,4 +1,4 @@
-class WithAC:
+class WithAirConditioner:
   def __init__(self, apartament):
     self.apartament = apartament
     apartament.air_conditioner = True

@@ -1,4 +1,6 @@
-class LivingSpace:
+from composite import CompositeInterface
+
+class LivingSpace(CompositeInterface):
   def get_temperature(self, season):
     seasons = {"autumn": "chilly", "winter": "normal", "spring": "norm", "summer": "hot"}
     return seasons[season]

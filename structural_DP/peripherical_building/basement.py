@@ -1,4 +1,6 @@
-class Basement:
+from composite import CompositeInterface
+
+class Basement(CompositeInterface):
   def __init__(self, area):
     self.area = area
 
