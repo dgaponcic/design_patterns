@@ -1,5 +1,5 @@
 from buildings.living_space import Apartament, Townhouse
-from composite import Composite
+from abstractions.composite import Composite
 from abc import ABC
 
 class LivingComplex(Composite, ABC):
@@ -11,7 +11,6 @@ class LivingComplex(Composite, ABC):
 
   def use_service(self):
     self.service.provide_service()
-
 
 
 class ApartamentComplex(LivingComplex):
@@ -33,7 +32,6 @@ class ApartamentComplex(LivingComplex):
     else:
       self.apartaments.append(apartament)
       self._children.add(apartament)
-
 
 
 class TownhouseComplex(LivingComplex):

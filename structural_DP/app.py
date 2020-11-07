@@ -1,7 +1,7 @@
 from buildings.living_space import Apartament, Townhouse
 from buildings.living_complex import ApartamentComplex, TownhouseComplex
-from decorator import WithAirConditioner, WithAutonomousHeating
-from services import DesignService, PlumbingService
+from buildings.decorator.decorator import WithAirConditioner, WithAutonomousHeating
+from services.services import DesignService, PlumbingService
 from peripherical_building.outside import Outside, Playgrounds, ParkingLots
 from peripherical_building.basement import Basement
 

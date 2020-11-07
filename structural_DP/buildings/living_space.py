@@ -1,4 +1,4 @@
-from composite import CompositeInterface
+from abstractions.composite import CompositeInterface
 from abc import ABC
 
 class LivingSpace(CompositeInterface, ABC):

@@ -1,4 +1,4 @@
-from composite import CompositeInterface
+from abstractions.composite import CompositeInterface
 
 class Basement(CompositeInterface):
   def __init__(self, area):
@@ -6,4 +6,3 @@ class Basement(CompositeInterface):
 
   def get_area(self):
     return self.area
-    
