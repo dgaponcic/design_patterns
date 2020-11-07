@@ -32,7 +32,7 @@ The temperatures in a default apartament or house:
 An example of decorator is the one to add air conditioner:
 
 ```
-class WithAC:
+class WithAirConditioner:
   def __init__(self, apartament):
     self.apartament = apartament
     apartament.air_conditioner = True
@@ -46,9 +46,10 @@ The code used to test the decorator:
   print(basic_apartament.get_temperature("summer"))
   print(basic_apartament.get_temperature("autumn"))
 
-  nice_apartament = WithAC(WithAutonomousHeating(basic_apartament))
+  nice_apartament = WithAirConditioner(WithAutonomousHeating(basic_apartament))
   print(nice_apartament.get_temperature("summer"))
   print(nice_apartament.get_temperature("autumn"))
+
 ```
 The result:
 
@@ -91,9 +92,13 @@ The diagram:
 ![alt text](https://github.com/dgaponcic/design_patterns/blob/master/structural_DP/examples/composite_diagram.png)
 
 
-The Composite class and the function for area calculation:
+The Composite abstract class and the interface:
 ```
-class Composite:
+class CompositeInterface:
+  def get_area(self):
+    pass
+
+class Composite(CompositeInterface, ABC):
   def get_area(self):
     return reduce((lambda x, y: x + y.get_area()), self._children, 0)
 ```
@@ -104,8 +109,14 @@ And the classes inherit from the composite class:
 class TownhouseComplex(LivingComplex):
 ```
 
-The leaves have the function get_area():
+The leaves implement get_area() function:
 ```
+class LivingSpace(CompositeInterface, ABC):
+  def get_temperature(self, season):
+    seasons = {"autumn": "chilly", "winter": "normal", "spring": "norm", "summer": "hot"}
+    return seasons[season]
+
+
 class Apartament(LivingSpace):
   def __init__(self, rooms, apartament_nb):
     self.rooms = rooms
@@ -115,6 +126,7 @@ class Apartament(LivingSpace):
   
   def get_area(self):
     return self.rooms * 30
+
 ```
 
 ```
