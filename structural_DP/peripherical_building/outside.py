@@ -16,7 +16,6 @@ class Outside(Composite):
     self._children.add(playground)
     
 
-
 class ParkingLots:
   def __init__(self, places, area):
     self.area = area
@@ -24,7 +23,6 @@ class ParkingLots:
 
   def get_area(self):
     return self.area
-
 
 
 class Playgrounds:

@@ -1,9 +1,11 @@
 from composite import CompositeInterface
+from abc import ABC
 
-class LivingSpace(CompositeInterface):
+class LivingSpace(CompositeInterface, ABC):
   def get_temperature(self, season):
     seasons = {"autumn": "chilly", "winter": "normal", "spring": "norm", "summer": "hot"}
     return seasons[season]
+
 
 class Apartament(LivingSpace):
   def __init__(self, rooms, apartament_nb):
@@ -14,6 +16,7 @@ class Apartament(LivingSpace):
   
   def get_area(self):
     return self.rooms * 30
+
 
 class Townhouse(LivingSpace):
   def __init__(self, rooms, house_nb):

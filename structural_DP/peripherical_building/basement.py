@@ -6,3 +6,4 @@ class Basement(CompositeInterface):
 
   def get_area(self):
     return self.area
+    

@@ -1,7 +1,8 @@
 from buildings.living_space import Apartament, Townhouse
 from composite import Composite
+from abc import ABC
 
-class LivingComplex(Composite):
+class LivingComplex(Composite, ABC):
   def add_parking_lot(self, parking_lot):
     self.outside.add_parking_lot(parking_lot)
   
@@ -10,7 +11,6 @@ class LivingComplex(Composite):
 
   def use_service(self):
     self.service.provide_service()
-
 
 
 
@@ -36,8 +36,6 @@ class ApartamentComplex(LivingComplex):
 
 
 
-
-
 class TownhouseComplex(LivingComplex):
   def __init__(self, floors, entrances, service, outside, basement):
     self.houses = []
@@ -54,4 +52,3 @@ class TownhouseComplex(LivingComplex):
     else:
       self.houses.append(house)
       self._children.add(house)
-
