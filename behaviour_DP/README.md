@@ -66,7 +66,7 @@ The pattern is used in a small client app:
 ```
 The result:
 
-![alt text](https://github.com/dgaponcic/design_patterns/blob/master/structural_DP/examples/result.png)
+![alt text](https://github.com/dgaponcic/design_patterns/blob/master/behaviour_DP/result.png)
 
 
 
