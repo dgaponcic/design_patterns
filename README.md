@@ -14,3 +14,5 @@ Implement design patterns in real life projects.
 [Creational Design Patterns](https://github.com/dgaponcic/design_patterns/tree/master/creational_DP)
 
 [Structural Design Patterns](https://github.com/dgaponcic/design_patterns/tree/master/structural_DP)
+
+[Behaviour Design Patterns](https://github.com/dgaponcic/design_patterns/tree/master/behaviour_DP)
